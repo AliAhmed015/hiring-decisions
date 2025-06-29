@@ -46,7 +46,7 @@ This comprehensive data science project analyzes recruitment and hiring patterns
 - **Jupyter Notebook**: Interactive development environment
 - **Plotly** (optional): Interactive visualizations
 
-## Quick Start Guide
+## 🚀 Quick Start Guide
 
 ### Prerequisites
 
@@ -104,64 +104,36 @@ Or run the complete pipeline:
 python src/main.py
 ```
 
-## Dataset Information
+## 📊 Dataset Information
 
 ### Data Source
 - **File**: `recruitment_data.csv`
-- **Size**: [Specify number of records and features]
-- **Time Period**: [Specify data collection period]
+- **Size**: 1,500 candidate records with 11 features
+- **Target Distribution**: 31% hired (465 candidates), 69% not hired (1,035 candidates)
 
-### Key Features
+### Feature Description
 
-| Feature Category | Examples | Description |
-|---|---|---|
-| **Demographics** | Age, Gender, Location | Candidate personal information |
-| **Education** | Degree, GPA, University Ranking | Academic background |
-| **Experience** | Years of Experience, Previous Companies | Professional history |
-| **Skills** | Technical Skills, Certifications | Competency assessments |
-| **Assessment Scores** | Technical Test, Soft Skills Score | Evaluation results |
-| **Target Variable** | Hiring Decision | Binary outcome (Hired/Not Hired) |
+| Feature | Type | Range/Values | Description |
+|---|---|---|---|
+| **Age** | Numeric | 20-50 years | Candidate age (mean: 35.1 years) |
+| **Gender** | Binary | 0/1 | Gender classification (49.2% coded as 1) |
+| **EducationLevel** | Categorical | 1-4 | Education level (1=Basic to 4=Advanced) |
+| **ExperienceYears** | Numeric | 0-15 years | Years of professional experience (mean: 7.7 years) |
+| **PreviousCompanies** | Numeric | 1-5 | Number of previous employers (mean: 3.0) |
+| **DistanceFromCompany** | Numeric | 1-51 km | Distance from company location (mean: 25.5 km) |
+| **InterviewScore** | Numeric | 0-100 | Interview performance score (mean: 50.6) |
+| **SkillScore** | Numeric | 0-100 | Technical/skill assessment score (mean: 51.1) |
+| **PersonalityScore** | Numeric | 0-100 | Personality assessment score (mean: 49.4) |
+| **RecruitmentStrategy** | Categorical | 1-3 | Recruitment channel used (mean: 1.9) |
+| **HiringDecision** | Binary | 0/1 | Target variable (0=Not Hired, 1=Hired) |
 
-### Data Quality
-- **Missing Values**: Handled through imputation and exclusion strategies
-- **Duplicates**: Identified and removed systematically
-- **Outliers**: Detected and treated appropriately
-- **Data Types**: Optimized for memory efficiency and processing speed
-
-## Usage Examples
-
-### Basic Analysis Workflow
-
-```python
-import pandas as pd
-from src.data.preprocessing import load_and_clean_data
-from src.models.train_models import train_hiring_models
-from src.visualization.plots import create_hiring_dashboard
-
-# Load and preprocess data
-df = load_and_clean_data('data/raw/recruitment_data.csv')
-
-# Train multiple models
-models, results = train_hiring_models(df)
-
-# Generate visualizations
-create_hiring_dashboard(df, results)
-```
-
-### Custom Model Training
-
-```python
-from sklearn.ensemble import RandomForestClassifier
-from src.models.evaluate_models import evaluate_model
-
-# Train custom model
-rf_model = RandomForestClassifier(n_estimators=100, random_state=42)
-rf_model.fit(X_train, y_train)
-
-# Evaluate performance
-metrics = evaluate_model(rf_model, X_test, y_test)
-print(f"Model Accuracy: {metrics['accuracy']:.4f}")
-```
+### Data Quality & Characteristics
+- **Complete Dataset**: No missing values across all 1,500 records
+- **Balanced Features**: All assessment scores show normal distribution around 50
+- **Age Distribution**: Primarily working-age adults (20-50 years) with median at 35
+- **Experience Range**: Covers entry-level to senior professionals (0-15 years)
+- **Geographic Spread**: Candidates located up to 51km from company
+- **Class Imbalance**: Dataset shows realistic hiring ratios with 31% success rate
 
 ## Results & Insights
 
@@ -177,17 +149,19 @@ The analysis includes comprehensive model evaluation and comparison across multi
 
 ### Key Analytical Findings
 
-**Critical Success Factors:**
-1. **Technical Competency**: Assessment scores show strongest correlation with hiring success
-2. **Professional Experience**: Years of relevant experience significantly impacts decisions
-3. **Educational Background**: Degree level and institution quality influence outcomes
-4. **Interpersonal Skills**: Soft skills evaluation plays important role
-5. **Cultural Alignment**: Team fit assessment contributes to final decisions
+**Critical Success Factors Analysis:**
+1. **Assessment Scores**: Interview, skill, and personality scores show strong predictive power
+2. **Professional Experience**: 7.7 years average experience with optimal ranges identified
+3. **Educational Attainment**: Higher education levels correlate with hiring success
+4. **Geographic Proximity**: Distance from company impacts hiring probability
+5. **Career Stability**: Number of previous companies influences decision patterns
 
-**Pattern Recognition:**
-- **Skill Combinations**: Certain technical skill combinations increase hiring probability
-- **Experience Levels**: Sweet spot identified for optimal experience requirements
-- **Assessment Thresholds**: Clear performance benchmarks emerge from data analysis
+**Data Insights:**
+- **Age Demographics**: Balanced age distribution with hiring concentration in 27-43 age range
+- **Gender Balance**: Nearly equal gender representation (49.2% vs 50.8%)
+- **Score Distributions**: All assessment scores well-distributed around midpoint (50)
+- **Recruitment Channels**: Multiple strategies employed with varying effectiveness
+- **Distance Factor**: Geographic proximity shows measurable impact on hiring outcomes
 
 ## Contributing
 
@@ -274,16 +248,6 @@ MIT License - Copyright (c) 2024 Hiring Decision Analysis Project
 
 ## Future Enhancements
 
-### Planned Features
-
-- [ ] **Real-time API**: RESTful API for integration with ATS systems
-- [ ] **Web Dashboard**: Interactive web interface for HR teams
-- [ ] **Deep Learning Models**: Neural networks for complex pattern recognition
-- [ ] **Natural Language Processing**: Resume and cover letter analysis
-- [ ] **A/B Testing Framework**: Evaluate hiring strategy effectiveness
-- [ ] **Bias Mitigation Tools**: Advanced fairness-aware algorithms
-- [ ] **Multi-language Support**: International hiring analysis capabilities
-
 ### Research Directions
 
 - Integration with video interview analysis
@@ -310,9 +274,9 @@ MIT License - Copyright (c) 2024 Hiring Decision Analysis Project
 
 ### Getting Help
 
-- 📋 **Issues**: [GitHub Issues](https://github.com/AliAhmed015/hiring-decision/issues) for bug reports and feature requests
-- 💬 **Discussions**: [GitHub Discussions](https://github.com/AliAhmed015/hiring-decision/discussions) for questions and community support
-- 📧 **Direct Contact**: [your-email@domain.com] for collaboration inquiries
+- **Issues**: [GitHub Issues](https://github.com/AliAhmed015/hiring-decision/issues) for bug reports and feature requests
+- **Discussions**: [GitHub Discussions](https://github.com/AliAhmed015/hiring-decision/discussions) for questions and community support
+- **Direct Contact**: [your-email@domain.com] for collaboration inquiries
 
 ### Community Guidelines
 
