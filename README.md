@@ -141,11 +141,8 @@ python src/main.py
 
 The analysis includes comprehensive model evaluation and comparison across multiple machine learning algorithms. Performance metrics are calculated using cross-validation to ensure robust results.
 
-**Performance Comparison:**
-- **Random Forest**: Strong performance with balanced precision and recall
+**Performance:**
 - **Logistic Regression**: Good interpretability with solid baseline performance  
-- **Support Vector Machine**: Competitive accuracy with robust classification
-- **XGBoost**: Top-performing model with excellent generalization
 
 ### Key Analytical Findings
 
@@ -254,36 +251,6 @@ MIT License - Copyright (c) 2024 Hiring Decision Analysis Project
 - Personality assessment correlation studies
 - Long-term employee success prediction
 - Cross-industry hiring pattern analysis
-
-## References & Resources
-
-### Academic Papers
-- "Algorithmic Hiring: Reducing Bias and Improving Diversity" - *Journal of Human Resources*
-- "Machine Learning in Recruitment: A Systematic Review" - *AI & Society*
-
-### Datasets
-- [Kaggle HR Analytics](https://www.kaggle.com/datasets/hr-analytics)
-- [UCI Adult Dataset](https://archive.ics.uci.edu/ml/datasets/adult)
-
-### Tools & Libraries
-- [Scikit-learn Documentation](https://scikit-learn.org/stable/)
-- [Pandas User Guide](https://pandas.pydata.org/docs/user_guide/)
-- [Seaborn Tutorial](https://seaborn.pydata.org/tutorial.html)
-
-## Support & Community
-
-### Getting Help
-
-- **Issues**: [GitHub Issues](https://github.com/AliAhmed015/hiring-decision/issues) for bug reports and feature requests
-- **Discussions**: [GitHub Discussions](https://github.com/AliAhmed015/hiring-decision/discussions) for questions and community support
-- **Direct Contact**: [your-email@domain.com] for collaboration inquiries
-
-### Community Guidelines
-
-- Be respectful and constructive in all interactions
-- Provide clear, reproducible examples when reporting issues
-- Follow the code of conduct in all community spaces
-- Help others learn and grow in their data science journey
 
 ---
 
